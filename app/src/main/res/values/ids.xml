@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="swipe_refresh" type="id"/>
+<item name="tv_net_error" type="id"/>
+    <item name="img_tag" type="id" />
+</resources>

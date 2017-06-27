@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.slb.group1"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    greendao{
+        schemaVersion 1
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs:jsr305'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    //    compile 'com.zhy:autolayout:1.4.3'
+
+    // rxjava
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.google.dagger:dagger:2.4'
+    compile 'com.google.dagger:dagger-compiler:2.4'
+    //java注解
+    compile 'com.camnter.easyrecyclerview:easyrecyclerview:1.1.0'
+    compile project(':RecyclerViewHelper')
+    compile project(':downloaderLib')
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.orhanobut:logger:1.15'
+    // retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'org.greenrobot:greendao:3.1.0'
+    compile 'org.greenrobot:greendao-generator:3.1.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
+    // recyclerview-animators
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+    // photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    // dragsloplayout
+    compile 'com.github.Rukey7:DragSlopLayout:1.0.3'
+    // TagLayout
+    compile 'com.github.Rukey7:TagLayout:1.0.5'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    // LabelView
+    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+    // tab layout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.0@aar'
+    // slider
+    compile 'com.daimajia.slider:library:1.1.5'
+    //leakcanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    //autolayout
+    compile 'com.zhy:autolayout:1.4.3'
+    // file picker
+    compile 'com.github.angads25:filepicker:1.0.6'
+    // shine button
+    compile 'com.sackcentury:shinebutton:0.1.6'
+    // dragsloplayout
+    compile 'com.github.Rukey7:DragSlopLayout:1.0.3'
+    // picasso, slider 库需要用到下面两个库,这样有点多余，可以选择别的库
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    // html text
+    compile 'com.zzhoujay.richtext:richtext:2.0.9'
+    compile 'io.reactivex:rxjava:1.3.0'
+}
