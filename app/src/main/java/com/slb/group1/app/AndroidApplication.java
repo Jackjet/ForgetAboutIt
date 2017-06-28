@@ -29,14 +29,15 @@ public class AndroidApplication extends MultiDexApplication {
     private RxBus mRxBus = new RxBus();
 
 
-
     @Override
     public void onCreate() {
         super.onCreate();
-        sContext=getApplicationContext();
+        sContext = getApplicationContext();
         _initInjector();
         _initConfig();
         _initUmeng();
+
+//        test
     }
 
     private void _initUmeng() {
@@ -45,6 +46,7 @@ public class AndroidApplication extends MultiDexApplication {
 
     /**
      * 使用Tinker生成Application，这里改成静态调用
+     *
      * @return
      */
     public static ApplicationComponent getAppComponent() {
@@ -61,7 +63,7 @@ public class AndroidApplication extends MultiDexApplication {
     private void _initInjector() {
         // 这里不做注入操作，只提供一些全局单例数据
         sAppComponent = DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(this,mRxBus))
+                .applicationModule(new ApplicationModule(this, mRxBus))
                 .build();
     }
 
@@ -80,7 +82,7 @@ public class AndroidApplication extends MultiDexApplication {
 
         // Normal app init code...
         //当出现闪退时，重新启动为了方便debug暂时不用
-       // CrashHandler.getInstance().init(getApplicationContext());
+        // CrashHandler.getInstance().init(getApplicationContext());
         //初始化Retrofit网络请求服务
         RetrofitService.init();
         //初始化toast工具
