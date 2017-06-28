@@ -45,7 +45,7 @@
         android:text="200g"
         android:textColor="#666666"
         android:textSize="20px"/>
-
+<!--阿斯达所多-->
     <TextView
         style="@style/shopping_textView_item2"
         android:layout_below="@id/tv_item2_jhl"

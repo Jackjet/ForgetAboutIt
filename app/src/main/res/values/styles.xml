@@ -115,6 +115,8 @@
         <item name="android:layout_marginBottom">26px</item>
     </style>
     <!--购物车item2字体样式-->
+
+    <!--阿斯达所多多-->
     <style name="shopping_textView_item2">
         <item name="android:textSize">22px</item>
         <item name="android:layout_width">wrap_content</item>
