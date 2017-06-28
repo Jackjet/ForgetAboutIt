@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="196px">
+
+    <RadioButton
+
+        android:id="@+id/rb_item2"
+        style="@style/shopping_radioButton_list"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/iv_item2"
+        android:layout_width="164px"
+        android:layout_height="164px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22px"
+        android:layout_toRightOf="@id/rb_item2"
+        android:background="@drawable/andrid"/>
+
+    <TextView
+        android:id="@+id/tv_item2_title"
+        style="@style/shopping_textView_item2"
+        android:layout_marginTop="30px"
+        android:text="阿拉啦啦啦啦阿拉啦啦啦asdasasdasd啦啦asdasdasd"
+        android:textColor="@color/shopping_text_color"
+        android:textSize="22px"/>
+
+    <TextView
+        android:id="@+id/tv_item2_jhl"
+        style="@style/shopping_textView_item2"
+        android:layout_below="@id/tv_item2_title"
+        android:layout_marginTop="20px"
+        android:text="净含量:"
+        android:textColor="#666666"
+        android:textSize="20px"/>
+
+    <TextView
+        android:id="@+id/tv_item2_g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item2_title"
+        android:layout_marginTop="20px"
+        android:layout_toEndOf="@id/tv_item2_jhl"
+        android:text="200g"
+        android:textColor="#666666"
+        android:textSize="20px"/>
+
+    <TextView
+        style="@style/shopping_textView_item2"
+        android:layout_below="@id/tv_item2_jhl"
+        android:layout_marginBottom="36px"
+        android:layout_marginTop="12px"
+        android:text="¥  888.0"
+        android:textColor="@color/price_text_color"/>
+
+    <TextView
+
+        android:id="@+id/tv_item2_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="132px"
+        android:text="X1"
+        android:textColor="@color/shopping_text_color"
+
+        android:textSize="22px"/>
+
+</RelativeLayout>

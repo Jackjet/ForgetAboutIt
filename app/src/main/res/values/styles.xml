@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -87,5 +88,39 @@
 
     <style name="manage_sub_title">
         <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--*****************************************************-->
+    <!--全选radiobutton样式-->
+    <style name="shopping_radioButton_style">
+        <item name="android:textColor">@color/shopping_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableTop">#fff0</item>
+    </style>
+    <!--列表radiobutton的样式-->
+    <style name="shopping_radioButton_list">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20px</item>
+    </style>
+    <!--购物车item1字体样式-->
+    <style name="shopping_textView_item1">
+        <item name="android:textSize">20px</item>
+        <item name="android:textColor">@color/shopping_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">26px</item>
+        <item name="android:layout_marginBottom">26px</item>
+    </style>
+    <!--购物车item2字体样式-->
+    <style name="shopping_textView_item2">
+        <item name="android:textSize">22px</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20px</item>
+        <item name="android:layout_toEndOf">@id/iv_item2</item>
+        <item name="android:layout_marginRight">20px</item>
     </style>
 </resources>
