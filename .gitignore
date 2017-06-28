@@ -7,8 +7,9 @@
 /build
 /captures
 .externalNativeBuild
-libs/
 
 
-app/src/main/java/com/slb/group1/wigget/dialog/
+
+
 gradlew.bat
+.idea/workspace.xml
