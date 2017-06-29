@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="72px">
 
-    <RadioButton
-        android:id="@+id/rb_item1"
-        style="@style/shopping_radioButton_list"/>
+    <ImageView
+        android:id="@+id/iv_shopping_item1_xuan"
+        style="@style/shopping_change_imageview"/>
+
 
     <TextView
         android:id="@+id/tv_shopping_shop"
         style="@style/shopping_textView_item1"
-
         android:layout_marginLeft="20px"
-
-        android:layout_toRightOf="@id/rb_item1"
-        android:text="茅台集团"
+        android:layout_toEndOf="@id/iv_shopping_item1_xuan"
+        android:text="@string/shop_shop_name"
         />
 
     <TextView
@@ -22,6 +21,6 @@
         style="@style/shopping_textView_item1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20px"
-        android:text="编辑"/>
+        android:text="@string/shop_bianji"/>
 
 </RelativeLayout>

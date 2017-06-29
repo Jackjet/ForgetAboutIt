@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">ForgetAboutIt</string>
 
-    <string name="shopping_title">购物车</string>
+    <string name="shop_title">购物车(%s)</string>
+    <string name="shop_zj">总计：</string>
+    <string name="shop_bianji">编辑</string>
+    <string name="shop_shop_name">茅台集团</string>
+    <string name="shop_button_jiesuan">结算</string>
+    <string name="shop_zongji">总计：</string>
+    <string name="shop_price">¥  888.88</string>
+    <string name="shop_qx">全选</string>
+    <string name="shop_jhl">净含量：</string>
+
 
 </resources>

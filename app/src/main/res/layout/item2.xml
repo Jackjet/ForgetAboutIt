@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="196px">
+                android:layout_height="196px"
+                android:background="#eeeeee">
 
-    <RadioButton
-
-        android:id="@+id/rb_item2"
-        style="@style/shopping_radioButton_list"
-        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/iv_shopping_item2_xuan"
+        style="@style/shopping_change_imageview"/>
 
     <ImageView
         android:id="@+id/iv_item2"
         android:layout_width="164px"
         android:layout_height="164px"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="22px"
-        android:layout_toRightOf="@id/rb_item2"
+        android:layout_marginLeft="20px"
+        android:layout_toRightOf="@id/iv_shopping_item2_xuan"
         android:background="@drawable/andrid"/>
 
     <TextView
@@ -31,7 +30,7 @@
         style="@style/shopping_textView_item2"
         android:layout_below="@id/tv_item2_title"
         android:layout_marginTop="20px"
-        android:text="净含量:"
+        android:text="@string/shop_jhl"
         android:textColor="#666666"
         android:textSize="20px"/>
 
@@ -45,17 +44,16 @@
         android:text="200g"
         android:textColor="#666666"
         android:textSize="20px"/>
-<!--阿斯达所多-->
+    <!--阿斯达所多-->
     <TextView
         style="@style/shopping_textView_item2"
         android:layout_below="@id/tv_item2_jhl"
         android:layout_marginBottom="36px"
         android:layout_marginTop="12px"
-        android:text="¥  888.0"
+        android:text="@string/shop_price"
         android:textColor="@color/price_text_color"/>
 
     <TextView
-
         android:id="@+id/tv_item2_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +62,6 @@
         android:layout_marginTop="132px"
         android:text="X1"
         android:textColor="@color/shopping_text_color"
-
         android:textSize="22px"/>
 
 </RelativeLayout>

@@ -1,31 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 
     <TextView
-        android:id="@+id/tv_shopping_title"
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
-        android:layout_height="63px"
+        android:layout_height="64px"
         android:layout_marginTop="50px"
         android:gravity="center"
-        android:text="@string/shopping_title"
+        android:text="@string/shop_title"
         android:textColor="@color/shopping_text_color"
         android:textSize="32px"/>
 
+    <RelativeLayout
+        android:id="@+id/rlShoppingCartEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tvTitle"
+        android:background="#FCFCFC"
+        android:visibility="invisible">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_shopping_main"
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_shopping_cart_empty"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="购物车为空"/>
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_shopping_title"
-        ></android.support.v7.widget.RecyclerView>
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTitle"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#00000000"
+        android:longClickable="true"/>
 
-    <include
-        layout="@layout/shopping_main_include"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-    </include>
+    <RelativeLayout
+        android:id="@+id/rlBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_shopping_xuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="12px"
+            android:background="@drawable/ic_uncheck"/>
+
+        <TextView
+            android:id="@+id/tv_shopping_qx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_shopping_xuan"
+            android:layout_marginBottom="12px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="8px"
+            android:text="@string/shop_qx"
+            android:textColor="@color/shopping_text_color"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/tv_shopping_zj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="26px"
+            android:layout_marginTop="32px"
+            android:layout_toEndOf="@id/tv_shopping_qx"
+            android:text="@string/shop_zongji"
+            android:textColor="@color/shopping_text_color"/>
+
+        <TextView
+            android:id="@+id/tv_shopping_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginTop="32px"
+            android:layout_toEndOf="@id/tv_shopping_zj"
+            android:text="@string/shop_price"
+
+            android:textColor="@color/price_text_color"/>
+
+        <Button
+            android:id="@+id/jiesuan"
+            android:layout_width="270px"
+            android:layout_height="72px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="@drawable/button_circle"
+            android:text="@string/shop_button_jiesuan"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
 </RelativeLayout>
