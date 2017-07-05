@@ -6,6 +6,7 @@ import com.orhanobut.logger.Logger;
 import com.slb.group1.api.bean.WelfarePhotoInfo;
 import com.slb.group1.api.bean.WelfarePhotoList;
 import com.slb.group1.app.AndroidApplication;
+import com.slb.group1.module.shopping.module.bean.CarBean;
 import com.slb.group1.utils.NetUtil;
 
 import java.io.File;
@@ -29,6 +30,7 @@ import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+
 /**
  * Created by long on 2016/8/22.
  * 整个网络通信服务的启动控制，必须先调用初始化函数才能正常使用网络通信接口
@@ -52,6 +54,7 @@ public class RetrofitService {
 
 
     private static IWelfareApi sWelfareService;
+    private static ICarApi sICarApi;
 
     // 递增页码
     private static final int INCREASE_PAGE = 20;
@@ -152,6 +155,7 @@ public class RetrofitService {
 
     /**
      * 获取福利图片
+     *
      * @return
      */
     public static Observable<WelfarePhotoInfo> getWelfarePhoto(int page) {
@@ -163,16 +167,27 @@ public class RetrofitService {
                 ;
     }
 
+    /**
+     * 获取购物车信息
+     *
+     * @return
+     */
+    public static Observable<CarBean.PageEntityBean> getShoppingCar(String uri) {
+        return sICarApi.getCarNeiRong(uri)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .flatMap(_flatMapCar());
+    }
 
 
     /******************************************* 转换器 **********************************************/
 
 
-
-
-
     /**
      * 类型转换
+     *
      * @return
      */
     private static Func1<WelfarePhotoList, Observable<WelfarePhotoInfo>> _flatMapWelfarePhotos() {
@@ -183,6 +198,23 @@ public class RetrofitService {
                     return Observable.empty();
                 }
                 return Observable.from(welfarePhotoList.getResults());
+            }
+        };
+    }
+
+    /**
+     * 类型转换
+     *
+     * @return
+     */
+    private static Func1<CarBean, Observable<CarBean.PageEntityBean>> _flatMapCar() {
+        return new Func1<CarBean, Observable<CarBean.PageEntityBean>>() {
+            @Override
+            public Observable<CarBean.PageEntityBean> call(CarBean carBean) {
+                if (carBean.getPageEntity().size() == 0) {
+                    return Observable.empty();
+                }
+                return Observable.from(carBean.getPageEntity());
             }
         };
     }

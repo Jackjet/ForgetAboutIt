@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="93px"
+    >
+
+    <ImageView
+        android:id="@+id/iv_xuan_shop_main"
+        android:layout_width="44px"
+        android:layout_height="44px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/moren"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_xuan_shop_main"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="4px"
+        android:text="全选"
+        android:textColor="@color/shopping_text_color"
+        android:textSize="20px"/>
+
+    <RelativeLayout
+
+        android:id="@+id/shop_qxuan_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="93px"
+        android:layout_toRightOf="@id/iv_xuan_shop_main"
+        >
+
+        <TextView
+            android:id="@+id/shop_zj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:layout_marginTop="32px"
+            android:text="总计："
+            android:textColor="#2a2a2a"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/shop_qxuan_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32px"
+            android:layout_toRightOf="@id/shop_zj"
+            android:text="¥ 888.88"
+            android:textColor="@color/price_text_color"
+            android:textSize="26px"/>
+
+        <Button
+            android:id="@+id/shop_jsuan"
+            android:layout_width="270px"
+            android:layout_height="72px"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="7px"
+            android:background="#d6076c"
+            android:gravity="center"
+            android:text="@string/shop_button_jiesuan"
+            android:textColor="#ffffff"
+            android:textSize="15px"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shop_shoucangordelete"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_toRightOf="@id/iv_xuan_shop_main"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/shoucang"
+            android:layout_width="270px"
+            android:layout_height="72px"
+            android:layout_marginBottom="15px"
+            android:layout_marginLeft="147px"
+            android:layout_marginTop="7px"
+
+            android:background="@color/price_text_color"
+            android:text="收藏"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/del"
+            android:layout_width="270px"
+            android:layout_height="72px"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="7px"
+            android:background="@drawable/button_"
+            android:text="删除"
+            android:textColor="@color/price_text_color"
+
+            android:textSize="26px"/>
+    </RelativeLayout>
+
+</RelativeLayout>
