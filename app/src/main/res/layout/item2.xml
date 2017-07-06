@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="196px"
+                android:background="#f7f7f7">
+
+    <ImageView
+        android:id="@+id/iv_shopping_item2_xuan"
+        style="@style/shopping_change_imageview"/>
+
+    <ImageView
+        android:id="@+id/iv_item2"
+        android:layout_width="164px"
+        android:layout_height="164px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20px"
+        android:layout_toRightOf="@id/iv_shopping_item2_xuan"
+        android:background="@drawable/andrid"/>
+
+    <RelativeLayout
+        android:id="@+id/item2_rl"
+        android:layout_width="match_parent"
+        android:layout_height="196px"
+        android:layout_marginRight="20px"
+        android:layout_toRightOf="@id/iv_item2"
+        >
+
+        <TextView
+            android:id="@+id/tv_item2_title"
+            style="@style/shopping_textView_item2"
+            android:layout_marginTop="30px"
+            android:text="阿拉啦啦啦啦阿拉啦啦啦asdasasdasd啦啦asdasdasd"
+            android:textColor="@color/shopping_text_color"
+            android:textSize="22px"/>
+
+        <TextView
+            android:id="@+id/tv_item2_jhl"
+            style="@style/shopping_textView_item2"
+            android:layout_below="@id/tv_item2_title"
+            android:layout_marginTop="20px"
+            android:text="@string/shop_jhl"
+            android:textColor="#666666"
+            android:textSize="20px"/>
+
+        <TextView
+            android:id="@+id/tv_item2_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item2_title"
+            android:layout_marginTop="20px"
+            android:layout_toEndOf="@id/tv_item2_jhl"
+            android:text="200g"
+            android:textColor="#666666"
+            android:textSize="20px"/>
+        <!--阿斯达所多-->
+        <TextView
+            android:id="@+id/shop_child_price"
+            style="@style/shopping_textView_item2"
+            android:layout_below="@id/tv_item2_jhl"
+            android:layout_marginBottom="36px"
+            android:layout_marginTop="12px"
+            android:text="@string/shop_price"
+            android:textColor="@color/price_text_color"/>
+
+        <TextView
+            android:id="@+id/tv_item2_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="132px"
+            android:text="X1"
+            android:textColor="@color/shopping_text_color"
+            android:textSize="22px"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/shop_rl_bianji"
+        android:layout_width="440px"
+        android:layout_height="45px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20px"
+        android:layout_toRightOf="@+id/iv_item2"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/shop_jian"
+            android:layout_width="127px"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_reduce"/>
+
+        <TextView
+            android:id="@+id/shop_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="1"/>
+
+        <ImageView
+            android:id="@+id/shop_jia"
+            android:layout_width="127px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add"/>
+    </RelativeLayout>
+
+</RelativeLayout>

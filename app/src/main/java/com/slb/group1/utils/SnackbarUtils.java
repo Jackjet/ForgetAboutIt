@@ -21,6 +21,7 @@ public final class SnackbarUtils {
 
     /**
      * 显示 Snackbar
+     *
      * @param activity
      * @param message
      * @param isLong
@@ -36,6 +37,7 @@ public final class SnackbarUtils {
 
     /**
      * 显示下载 Snackbar
+     *
      * @param activity
      * @param message
      * @param isLong
@@ -48,12 +50,12 @@ public final class SnackbarUtils {
         Snackbar snackbar = Snackbar.make(view, message, isLong ? Snackbar.LENGTH_LONG : Snackbar.LENGTH_SHORT);
         View snackbarView = snackbar.getView();
         if (snackbarView != null) {
-            snackbarView.setBackgroundColor(ContextCompat.getColor(activity, R.color.snackbar_bg));
+            snackbarView.setBackgroundColor(ContextCompat.getColor(activity, R.color.yellow));
         }
         snackbar.setAction("查看任务>", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   DownloadActivity.launch(activity, 1);
+                //   DownloadActivity.launch(activity, 1);
             }
         }).show();
     }

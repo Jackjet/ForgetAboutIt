@@ -19,7 +19,7 @@ public class WelfarePhotoInfo {
      * used : true
      * who : daimajia
      */
-    @SerializedName("_id")
+//    @SerializedName("_id")
     private String id;
     private String createdAt;
     private String desc;

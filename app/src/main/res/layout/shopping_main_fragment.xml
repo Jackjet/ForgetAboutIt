@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!--标题-->
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/shopping_title"></include>
+    <!--二级列表-->
+    <include
+        android:id="@+id/include_expandablelistview"
+        layout="@layout/shopping_expandablelistview"
+        ></include>
+
+    <include
+        android:id="@+id/include_qxuan"
+        layout="@layout/qxuan"></include>
+
+
+</LinearLayout>

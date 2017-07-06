@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+     <stroke
+        android:width="3px"
+        android:color="@color/price_text_color"/><!-- 描边，边框宽度、颜色 -->
+    <!--<corners android:radius="10dp"/>&lt;!&ndash; 边角圆弧的半径 &ndash;&gt;-->
+    <padding
+        android:bottom="3px"
+        android:left="3px"
+        android:right="3px"
+        android:top="3px"/><!-- 四周留出来的空白 -->
+</shape>
