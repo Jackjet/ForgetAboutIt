@@ -154,4 +154,6 @@
 
 
 
+    <color name="snackbar_bg">#ccf57c00</color>
+    <color name="center_tv">#2a2a2a</color>
 </resources>

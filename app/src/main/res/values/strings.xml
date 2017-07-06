@@ -1,5 +1,24 @@
 <resources>
     <string name="app_name">ForgetAboutIt</string>
+    <string name="login_or_register">登陆/注册</string>
+    <string name="mine_all">全部</string>
+    <string name="tv_waitfor_send">待发货</string>
+    <string name="tv_wait_accept">待收货</string>
+    <string name="tv_wait_evaluate">待评价</string>
+    <string name="tv_customer_service">售后</string>
+    <string name="tv_my_favor">我的收藏</string>
+    <string name="tv_receive_address">收货地址</string>
+    <string name="tv_mine_setting">设置</string>
+    <string name="tv_about_us">关于我们</string>
+    <string name="tv_mine_share">分享给好友</string>
+    <string name="tv_mine_evaluate">打分评价</string>
+    <string name="tv_info_header">头像:</string>
+    <string name="nickname">昵称:%1$s</string>
+    <string name="gender">性别:</string>
+    <string name="woman">女</string>
+    <string name="man">男</string>
+    <string name="tv_email">邮箱:%1$s</string>
+    <string name="birthday">生日:</string>
 
     <string name="shop_title">购物车(%s)</string>
     <string name="shop_zj">总计：</string>

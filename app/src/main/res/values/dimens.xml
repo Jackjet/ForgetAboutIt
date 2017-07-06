@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="status_margin_top">0px</dimen>
+    <dimen name="layout_user_header_width">145px</dimen>
+    <dimen name="layout_user_header_height">177px</dimen>
+    <dimen name="user_header_marginBottom">160px</dimen>
+    <dimen name="btn_login_marginBottom">146px</dimen>
+    <dimen name="btn_lr_height">50px</dimen>
+    <dimen name="btn_lr_width">150px</dimen>
+    <dimen name="btn_lr_tsize">24px</dimen>
+    <dimen name="avatar_width">145px</dimen>
+    <dimen name="avatar_info_width">110px</dimen>
+    <dimen name="avatar_tv_marginTop">6px</dimen>
+    <dimen name="avatar_tv_size">26px</dimen>
+    <dimen name="btn_msg_width">40px</dimen>
+    <dimen name="btn_msg_margin_t">10px</dimen>
+    <dimen name="header_fragment_height">430px</dimen>
+    <dimen name="btn_msg_margin_r">30.0px</dimen>
+    <dimen name="tv_order_num" >14.0px</dimen>
+</resources>
